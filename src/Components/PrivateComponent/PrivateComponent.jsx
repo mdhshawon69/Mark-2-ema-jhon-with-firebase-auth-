@@ -12,7 +12,7 @@ const PrivateComponent = ({ children, ...rest }) => {
         <Route
             {...rest}
             render={({ location }) =>
-                loggedUser.isSignedIn ? (
+                loggedUser.email ? (
                     children
                 ) : (
                     <Redirect

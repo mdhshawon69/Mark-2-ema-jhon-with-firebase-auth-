@@ -1,6 +1,6 @@
 {
   // Theme
-  "workbench.colorTheme": "Electron",
+  "workbench.colorTheme": "Night Owl",
 
   // config related to code formatting
   "editor.defaultFormatter": "esbenp.prettier-vscode",

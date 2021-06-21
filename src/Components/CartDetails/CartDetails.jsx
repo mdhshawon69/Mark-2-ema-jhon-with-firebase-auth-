@@ -27,7 +27,7 @@ const CartDetails = () => {
     }, []);
 
     const proceedCheckout = () => {
-        history.push('shipment');
+        history.push('/shipment');
     };
     const removeProduct = (productKey) => {
         const newCart = cart.filter((pd) => pd.key !== productKey);

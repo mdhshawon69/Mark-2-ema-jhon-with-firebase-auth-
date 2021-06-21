@@ -1,3 +1,4 @@
+/* eslint-disable import/no-cycle */
 import React, { createContext, useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
@@ -13,12 +14,20 @@ import Shop from './Components/Shop/Shop';
 export const UserContext = createContext();
 
 function App() {
-    const [loggedUser, setLoggedUser] = useState({});
-    const logged = true;
+    const [loggedUser, setLoggedUser] = useState({
+        isLoggedIn: false,
+        name: '',
+        email: '',
+        photoURL: '',
+        success: false,
+        error: '',
+    });
 
     return (
         <UserContext.Provider value={[loggedUser, setLoggedUser]}>
             <p>Email: {loggedUser.email}</p>
+            <p>Password: {loggedUser.password}</p>
+            <p>name: {loggedUser.name}</p>
             <Router>
                 <Header />
                 <Switch>

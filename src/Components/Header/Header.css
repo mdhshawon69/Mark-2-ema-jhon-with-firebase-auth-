@@ -1,4 +1,4 @@
-.header img {
+.header .logo {
     height: 80px;
     width: auto;
 }
@@ -20,9 +20,21 @@
     font-size: 18px;
     text-transform: uppercase;
     padding: 20px;
+    position: relative;
 }
 
 .nav-items a:hover {
     background-color: #999;
     transition: all 0.5s;
+}
+
+.profile {
+    height: 40px;
+    width: auto;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(-100px, 170px);
+    background-color: #999;
 }
